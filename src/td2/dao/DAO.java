@@ -1,4 +1,4 @@
-package td2;
+package td2.dao;
 
 public interface DAO<T> {
 	public abstract T getById(int id);
