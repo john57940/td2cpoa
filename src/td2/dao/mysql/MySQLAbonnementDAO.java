@@ -3,7 +3,6 @@ package td2.dao.mysql;
 import java.util.ArrayList;
 
 import td2.PojoAbonnement;
-import td2.PojoPerio;
 import td2.dao.DAOAbonnement;
 
 public class MySQLAbonnementDAO implements DAOAbonnement {
