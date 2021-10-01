@@ -10,7 +10,7 @@ public class PojoAbonnement {
 	private Date date_debut;
 	private Date date_fin;
 
-	public void Abonnement(int id_client, int id_revue, int id_abonnement, Date date_debut, Date date_fin) {
+	public PojoAbonnement(int id_client, int id_revue, int id_abonnement, Date date_debut, Date date_fin) {
 		this.setId_client(id_client);
 		this.setId_revue(id_revue);
 		this.setId_abonnement(id_abonnement);

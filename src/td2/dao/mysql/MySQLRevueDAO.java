@@ -1,5 +1,8 @@
 package td2.dao.mysql;
 
+import java.util.ArrayList;
+
+import td2.PojoPerio;
 import td2.PojoRevue;
 import td2.dao.DAORevue;
 
@@ -27,6 +30,12 @@ public class MySQLRevueDAO implements DAORevue {
 	public boolean delete(PojoRevue objet) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public ArrayList<PojoPerio> findAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

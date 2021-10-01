@@ -4,11 +4,11 @@ public class PojoPerio {
 	private int id_periodicite;
 	private String libelle;
 
-	public void Perio1(int i, String libelle) {
-		this.Perio1(-1, libelle);
+	public PojoPerio(String libelle) {
+		this(-1, libelle);
 	}
 
-	public void Perio2(int id_periodicite, String libelle) {
+	public PojoPerio(int id_periodicite, String libelle) {
 		this.setId_periodicite(id_periodicite);
 		this.setLibelle(libelle);
 	}

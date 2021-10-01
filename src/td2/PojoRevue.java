@@ -8,8 +8,8 @@ public class PojoRevue {
 	private String description;
 	private float tarif_numero;
 	private String visuel;
-
-	public void Abonnement(int id_periodicite, int id_revue, String titre, float tarif_numero, String visuel) {
+	
+	public PojoRevue(int id_periodicite, int id_revue, String titre, float tarif_numero, String visuel) {
 		this.setId_periodicite(id_periodicite);
 		this.setId_revue(id_revue);
 		this.setTitre(titre);

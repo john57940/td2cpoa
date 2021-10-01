@@ -14,7 +14,7 @@ public class PojoClient {
 	// this.Perio1(-1, nom);
 	// }
 
-	public void Client(int id_client, String nom, String prenom, String no_rue, String voie, String code_postal,
+	public PojoClient(int id_client, String nom, String prenom, String no_rue, String voie, String code_postal,
 			String ville, String pays) {
 		this.setId_client(id_client);
 		this.setNo_rue(nom);

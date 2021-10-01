@@ -1,6 +1,9 @@
 package td2.dao.mysql;
 
+import java.util.ArrayList;
+
 import td2.PojoClient;
+import td2.PojoPerio;
 import td2.dao.DAOClient;
 
 public class MySQLClientDAO implements DAOClient {
@@ -27,6 +30,12 @@ public class MySQLClientDAO implements DAOClient {
 	public boolean delete(PojoClient objet) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public ArrayList<PojoPerio> findAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
