@@ -10,12 +10,11 @@ public class PojoClient {
 	private String ville;
 	private String pays;
 
-	// public void Perio1(int i, String nom) {
-	// this.Perio1(-1, nom);
-	// }
+	public PojoClient (String nom, String prenom, String no_rue, String voie, String code_postal,String ville, String pays) {
+	 this(-1, nom, prenom, no_rue, voie, code_postal, ville, pays);
+	 }
 
-	public PojoClient(int id_client, String nom, String prenom, String no_rue, String voie, String code_postal,
-			String ville, String pays) {
+	public PojoClient(int id_client, String nom, String prenom, String no_rue, String voie, String code_postal,String ville, String pays) {
 		this.setId_client(id_client);
 		this.setNo_rue(nom);
 		this.setNom(prenom);

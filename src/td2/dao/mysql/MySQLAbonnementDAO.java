@@ -38,4 +38,10 @@ public class MySQLAbonnementDAO implements DAOAbonnement {
 		return null;
 	}
 
+	@Override
+	public ArrayList<PojoAbonnement> findAll1() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

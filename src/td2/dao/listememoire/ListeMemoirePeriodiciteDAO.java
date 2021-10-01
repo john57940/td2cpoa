@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import td2.dao.DAOPeriodicite;
+import td2.PojoAbonnement;
 import td2.PojoPerio;
 
 public class ListeMemoirePeriodiciteDAO implements DAOPeriodicite {
@@ -89,6 +90,12 @@ public class ListeMemoirePeriodiciteDAO implements DAOPeriodicite {
 	@Override
 	public ArrayList<PojoPerio> findAll() {
 		return (ArrayList<PojoPerio>) this.donnees;
+	}
+
+	@Override
+	public ArrayList<PojoAbonnement> findAll1() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
 
