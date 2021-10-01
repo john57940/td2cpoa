@@ -5,5 +5,5 @@ import java.util.ArrayList;
 import td2.PojoAbonnement;
 
 public interface DAOAbonnement extends DAO<PojoAbonnement>{
-	ArrayList<PojoAbonnement> findAll1();
+	ArrayList<PojoAbonnement> findAll();
 }

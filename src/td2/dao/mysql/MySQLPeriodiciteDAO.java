@@ -1,8 +1,6 @@
 package td2.dao.mysql;
 
 import java.util.ArrayList;
-
-import td2.PojoAbonnement;
 import td2.PojoPerio;
 import td2.dao.DAOPeriodicite;
 
@@ -34,12 +32,6 @@ public class MySQLPeriodiciteDAO implements DAOPeriodicite {
 
 	@Override
 	public ArrayList<PojoPerio> findAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<PojoAbonnement> findAll1() {
 		// TODO Auto-generated method stub
 		return null;
 	}
