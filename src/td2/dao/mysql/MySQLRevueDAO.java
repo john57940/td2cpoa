@@ -6,6 +6,13 @@ import td2.PojoRevue;
 import td2.dao.DAORevue;
 
 public class MySQLRevueDAO implements DAORevue {
+private static MySQLRevueDAO instance;
+public static MySQLRevueDAO getInstance() {
+	if(instance == null) {
+		instance = new MySQLRevueDAO();
+	}
+	return instance;
+}
 
 	@Override
 	public PojoRevue getById(int id) {

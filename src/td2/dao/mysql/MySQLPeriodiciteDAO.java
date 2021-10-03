@@ -5,6 +5,13 @@ import td2.PojoPerio;
 import td2.dao.DAOPeriodicite;
 
 public class MySQLPeriodiciteDAO implements DAOPeriodicite {
+	private static MySQLPeriodiciteDAO instance;
+    public static MySQLPeriodiciteDAO getInstance() {
+    	if(instance == null) {
+    		instance = new MySQLPeriodiciteDAO();
+    	}
+    	return instance;
+    }
 
 	@Override
 	public PojoPerio getById(int id) {

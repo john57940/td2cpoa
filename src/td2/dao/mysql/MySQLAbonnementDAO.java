@@ -6,7 +6,13 @@ import td2.PojoAbonnement;
 import td2.dao.DAOAbonnement;
 
 public class MySQLAbonnementDAO implements DAOAbonnement {
-
+    private static MySQLAbonnementDAO instance;
+    public static MySQLAbonnementDAO getInstance() {
+    	if(instance == null) {
+    		instance = new MySQLAbonnementDAO();
+    	}
+    	return instance;
+    }
 	@Override
 	public PojoAbonnement getById(int id) {
 		// TODO Auto-generated method stub

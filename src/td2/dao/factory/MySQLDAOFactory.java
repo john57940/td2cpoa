@@ -1,4 +1,4 @@
-/*package td2.dao.factory;
+package td2.dao.factory;
 
 import td2.dao.DAOAbonnement;
 import td2.dao.DAOClient;
@@ -37,4 +37,4 @@ public class MySQLDAOFactory extends DAOFactory {
 
     }
 
-}*/
+}

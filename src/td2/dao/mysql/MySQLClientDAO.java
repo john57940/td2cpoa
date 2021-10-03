@@ -6,6 +6,13 @@ import td2.PojoClient;
 import td2.dao.DAOClient;
 
 public class MySQLClientDAO implements DAOClient {
+	private static MySQLClientDAO instance;
+    public static MySQLClientDAO getInstance() {
+    	if(instance == null) {
+    		instance = new MySQLClientDAO();
+    	}
+    	return instance;
+    }
 
 	@Override
 	public PojoClient getById(int id) {
