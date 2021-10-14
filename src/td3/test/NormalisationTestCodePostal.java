@@ -9,7 +9,7 @@ import td3.Normalisation.NormalisationCodePostal;
 public class NormalisationTestCodePostal {
 
 	@Test
-	public void testNormalizeMontigny() {
+	public void testNormalizeCode() {
 		assertEquals(NormalisationCodePostal.normalize(" L-2270"), "2270");
 	}
 }

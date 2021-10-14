@@ -12,4 +12,4 @@ public class NormalisationTestVille {
 	public void testNormalizeMontigny() {
 //		assertEquals(NormalisationVille.normalize("montigny lès metz"), "Montigny-lès-Metz");
 	}
-}
+}//ne fonctionne pas pour le moment
