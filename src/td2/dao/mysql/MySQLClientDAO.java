@@ -7,12 +7,13 @@ import td2.metier.Client;
 
 public class MySQLClientDAO implements DAOClient {
 	private static MySQLClientDAO instance;
-    public static MySQLClientDAO getInstance() {
-    	if(instance == null) {
-    		instance = new MySQLClientDAO();
-    	}
-    	return instance;
-    }
+
+	public static MySQLClientDAO getInstance() {
+		if (instance == null) {
+			instance = new MySQLClientDAO();
+		}
+		return instance;
+	}
 
 	@Override
 	public Client getById(int id) {

@@ -8,13 +8,13 @@ public class Revue {
 	private String description;
 	private float tarif_numero;
 	private String visuel;
-	
-	public Revue (int id_periodicite, String titre,String description, float tarif_numero, String visuel) {
-		 this(-1, id_periodicite, titre, description, tarif_numero, visuel);
-		 }
 
-	
-	public Revue(int id_revue, int id_periodicite, String titre, String description, float tarif_numero, String visuel) {
+	public Revue(int id_periodicite, String titre, String description, float tarif_numero, String visuel) {
+		this(-1, id_periodicite, titre, description, tarif_numero, visuel);
+	}
+
+	public Revue(int id_revue, int id_periodicite, String titre, String description, float tarif_numero,
+			String visuel) {
 		this.setId_periodicite(id_periodicite);
 		this.setId_revue(id_revue);
 		this.setTitre(titre);
@@ -48,7 +48,7 @@ public class Revue {
 			throw new IllegalArgumentException("Titre vide !");
 		}
 		this.titre = titre;
-		
+
 	}
 
 	public String getDescription() {

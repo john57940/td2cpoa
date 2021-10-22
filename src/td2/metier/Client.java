@@ -10,11 +10,13 @@ public class Client {
 	private String ville;
 	private String pays;
 
-	public Client (String nom, String prenom, String no_rue, String voie, String code_postal,String ville, String pays) {
-	 this(-1, nom, prenom, no_rue, voie, code_postal, ville, pays);
-	 }
+	public Client(String nom, String prenom, String no_rue, String voie, String code_postal, String ville,
+			String pays) {
+		this(-1, nom, prenom, no_rue, voie, code_postal, ville, pays);
+	}
 
-	public Client(int id_client, String nom, String prenom, String no_rue, String voie, String code_postal,String ville, String pays) {
+	public Client(int id_client, String nom, String prenom, String no_rue, String voie, String code_postal,
+			String ville, String pays) {
 		this.setId_client(id_client);
 		this.setNo_rue(nom);
 		this.setNom(prenom);
@@ -111,7 +113,8 @@ public class Client {
 	}
 
 	public String toString() {
-		return "(" + (this.id_client >= 0 ? this.id_client : "nouveau") + ") " + this.nom + this.prenom + this.no_rue + this.voie + this.code_postal + this.ville + this.pays;
+		return "(" + (this.id_client >= 0 ? this.id_client : "nouveau") + ") " + this.nom + this.prenom + this.no_rue
+				+ this.voie + this.code_postal + this.ville + this.pays;
 	}
 
 }

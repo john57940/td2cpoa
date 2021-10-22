@@ -13,7 +13,6 @@ public class ListeMemoireClientDAO implements DAOClient {
 
 	private List<Client> donnees;
 
-
 	public static ListeMemoireClientDAO getInstance() {
 
 		if (instance == null) {
@@ -27,14 +26,13 @@ public class ListeMemoireClientDAO implements DAOClient {
 
 		this.donnees = new ArrayList<Client>();
 
-		this.donnees.add(new Client(1, "vernet", "jonathan", "6", "rue des eglantines","57940","thionville","france" ));
-		this.donnees.add(new Client(2, "mccafe", "john","92","walking street","92700","new york","etats unis"));
+		this.donnees
+				.add(new Client(1, "vernet", "jonathan", "6", "rue des eglantines", "57940", "thionville", "france"));
+		this.donnees.add(new Client(2, "mccafe", "john", "92", "walking street", "92700", "new york", "etats unis"));
 	}
 
-
 	@Override
-	public boolean create(Client objet) 
-	{
+	public boolean create(Client objet) {
 		objet.setId_client(3);
 		// Ne fonctionne que si l'objet métier est bien fait...
 		while (this.donnees.contains(objet)) {
@@ -42,22 +40,22 @@ public class ListeMemoireClientDAO implements DAOClient {
 			objet.setId_client(objet.getId_client() + 1);
 		}
 		boolean ok = this.donnees.add(objet);
-		
+
 		return ok;
 	}
 
 	@Override
 	public boolean update(Client objet) {
-		
+
 		// Ne fonctionne que si l'objet métier est bien fait...
 		int idx = this.donnees.indexOf(objet);
 		if (idx == -1) {
 			throw new IllegalArgumentException("Tentative de modification d'un objet inexistant");
 		} else {
-			
+
 			this.donnees.set(idx, objet);
 		}
-		
+
 		return true;
 	}
 
@@ -65,7 +63,7 @@ public class ListeMemoireClientDAO implements DAOClient {
 	public boolean delete(Client objet) {
 
 		Client supprime;
-		
+
 		// Ne fonctionne que si l'objet métier est bien fait...
 		int idx = this.donnees.indexOf(objet);
 		if (idx == -1) {
@@ -73,7 +71,7 @@ public class ListeMemoireClientDAO implements DAOClient {
 		} else {
 			supprime = this.donnees.remove(idx);
 		}
-		
+
 		return objet.equals(supprime);
 	}
 
@@ -87,10 +85,9 @@ public class ListeMemoireClientDAO implements DAOClient {
 			return this.donnees.get(idx);
 		}
 	}
+
 	@Override
 	public ArrayList<Client> findAll() {
 		return (ArrayList<Client>) this.donnees;
 	}
 }
-
-

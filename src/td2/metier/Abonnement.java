@@ -4,22 +4,25 @@ import java.util.Date;
 
 public class Abonnement {
 
+	private static final Client NULL = null;
 	private int id_client;
 	private int id_revue;
 	private int id_abonnement;
 	private Date date_debut;
 	private Date date_fin;
-	
-	public Abonnement(int id_client, int id_revue,Date date_debut, Date date_fin) {
-		this(-1, id_client, id_revue, date_debut, date_fin );
+	private Client C;
+
+	public Abonnement(int id_client, int id_revue, Date date_debut, Date date_fin, Client C) {
+		this(-1, id_client, id_revue, date_debut, date_fin, C);
 	}
 
-	public Abonnement(int id_abonnement,int id_client, int id_revue, Date date_debut, Date date_fin) {
+	public Abonnement(int id_abonnement, int id_client, int id_revue, Date date_debut, Date date_fin, Client C) {
 		this.setId_client(id_client);
 		this.setId_revue(id_revue);
 		this.setId_abonnement(id_abonnement);
 		this.setDate_debut(date_debut);
 		this.setDate_fin(date_fin);
+		this.setC(C);
 	}
 
 	public int getId_client() {
@@ -61,9 +64,32 @@ public class Abonnement {
 	public void setDate_fin(Date date_fin) {
 		this.date_fin = date_fin;
 	}
+	public Client getC() {
+		return C;
+	}
+
+	public void setC(Client c) {
+		C = c;
+	}
 
 	public String toString() {
 		return "(" + (this.id_abonnement >= 0 ? this.id_abonnement : "nouveau") + ") " + this.id_client + this.id_revue
 				+ this.date_debut + this.date_fin;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Abonnement other = (Abonnement) obj;
+		if (C == NULL) {
+			if (other.C != NULL)
+				return false;
+		} else if (!C.equals(other.C))
+			return false;
+		return true;
 	}
 }

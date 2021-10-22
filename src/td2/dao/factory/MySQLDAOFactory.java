@@ -10,31 +10,31 @@ import td2.dao.mysql.MySQLPeriodiciteDAO;
 import td2.dao.mysql.MySQLRevueDAO;
 
 public class MySQLDAOFactory extends DAOFactory {
-    @Override
-    public DAOAbonnement getDAOAbonnement() {
-        return MySQLAbonnementDAO.getInstance();
+	@Override
+	public DAOAbonnement getDAOAbonnement() {
+		return MySQLAbonnementDAO.getInstance();
 
-    }
+	}
 
-    @Override
-    public DAOClient getDAOClient() {
+	@Override
+	public DAOClient getDAOClient() {
 
-        return MySQLClientDAO.getInstance();
+		return MySQLClientDAO.getInstance();
 
-    }
-    
-    @Override
-    public DAOPeriodicite getDAOPeriodicite() {
+	}
 
-        return MySQLPeriodiciteDAO.getInstance();
+	@Override
+	public DAOPeriodicite getDAOPeriodicite() {
 
-    }
-    
-    @Override
-    public DAORevue getDAORevue() {
+		return MySQLPeriodiciteDAO.getInstance();
 
-        return MySQLRevueDAO.getInstance();
+	}
 
-    }
+	@Override
+	public DAORevue getDAORevue() {
+
+		return MySQLRevueDAO.getInstance();
+
+	}
 
 }

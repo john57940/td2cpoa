@@ -6,13 +6,14 @@ import td2.dao.DAORevue;
 import td2.metier.Revue;
 
 public class MySQLRevueDAO implements DAORevue {
-private static MySQLRevueDAO instance;
-public static MySQLRevueDAO getInstance() {
-	if(instance == null) {
-		instance = new MySQLRevueDAO();
+	private static MySQLRevueDAO instance;
+
+	public static MySQLRevueDAO getInstance() {
+		if (instance == null) {
+			instance = new MySQLRevueDAO();
+		}
+		return instance;
 	}
-	return instance;
-}
 
 	@Override
 	public Revue getById(int id) {
