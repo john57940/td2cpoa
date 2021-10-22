@@ -26,8 +26,8 @@ public class ListeMemoireAbonnementDAO implements DAOAbonnement {
 
 		this.donnees = new ArrayList<Abonnement>();
 
-		//this.donnees.add(new PojoAbonnement(1, 1, 1, ));
-		//this.donnees.add(new PojoAbonnement(2, 2, 2, )); a corriger
+		this.donnees.add(new Abonnement(1, 1, 1, null, null));
+		this.donnees.add(new Abonnement(2, 2, 2, null, null));
 	}
 
 
@@ -79,13 +79,13 @@ public class ListeMemoireAbonnementDAO implements DAOAbonnement {
 	@Override
 	public Abonnement getById(int id) {
 		// Ne fonctionne que si l'objet métier est bien fait...
-		//int idx = this.donnees.indexOf(new PojoAbonnement(id, )); a completer
-		//if (idx == -1) {
+		int idx = this.donnees.indexOf(new Abonnement(id, id, id, null, null));
+		if (idx == -1) {
 			throw new IllegalArgumentException("Aucun objet ne possède cet identifiant");
-		//} else {
-		//	return this.donnees.get(idx);
+		} else {
+			return this.donnees.get(idx);
 		}
-	//}
+	}
 	@Override
 	public ArrayList<Abonnement> findAll() {
 		return (ArrayList<Abonnement>) this.donnees;

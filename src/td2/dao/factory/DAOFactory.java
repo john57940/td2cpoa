@@ -1,6 +1,7 @@
 package td2.dao.factory;
 
 import td2.dao.DAOAbonnement;
+
 import td2.dao.DAOClient;
 import td2.dao.DAOPeriodicite;
 import td2.dao.DAORevue;
@@ -11,10 +12,10 @@ public abstract class DAOFactory {
 
         switch (cible) {
         case MYSQL:
-      //      daoF = new MySQLDAOFactory();
+        daoF = new MySQLDAOFactory();
         break;
         case ListeMemoireDAO:
-           // daoF = new ListeMemoireFactoryDAO();
+            daoF = new ListeMemoireFactoryDAO();
             break;
 		default:
 			break;

@@ -1,5 +1,7 @@
 package td2.dao;
 
+import java.util.ArrayList;
+
 public interface DAO<T> {
 	public abstract T getById(int id);
 
@@ -8,4 +10,6 @@ public interface DAO<T> {
 	public abstract boolean update(T objet);
 
 	public abstract boolean delete(T objet);
+	
+	ArrayList<?> findAll();
 }

@@ -66,5 +66,4 @@ public class Abonnement {
 		return "(" + (this.id_abonnement >= 0 ? this.id_abonnement : "nouveau") + ") " + this.id_client + this.id_revue
 				+ this.date_debut + this.date_fin;
 	}
-
 }
