@@ -26,7 +26,7 @@ public class Main {
 		System.out.println(ListeMemoirePeriodiciteDAO.getInstance().getById(3));
 		System.out.println("onjet supprimé ");
 
-		Connection.creeConnexion();
+		Connexion.creeConnexion();
 		System.out.println("Liste des Periodicites : ");
 		Periodicite perio3 = new Periodicite(1, "Mensuelle");
 		MySQLPeriodiciteDAO.getInstance().create(perio3);

@@ -85,5 +85,18 @@ public class Revue {
 		return "(" + (this.id_revue >= 0 ? this.id_revue : "nouveau") + ") " + this.titre + this.description
 				+ this.tarif_numero + this.visuel + this.id_periodicite;
 	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Revue other = (Revue) obj;
+		if (id_revue != other.id_revue)
+			return false;
+		return true;
+	}
 
 }

@@ -8,7 +8,6 @@ public class NormalisationTestAdresse {
 
 	// @Test
 	public void testNormalizeNumAdd() {
-		// assertEquals(NormalisationAdresse.normalize("3 rue des alouettes"), "3, rue
-		// des alouettes");
+//		 assertEquals(NormalisationAdresse.normalize("3 rue des alouettes"), "3, rue des alouettes");
 	}
 }

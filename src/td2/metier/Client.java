@@ -116,5 +116,18 @@ public class Client {
 		return "(" + (this.id_client >= 0 ? this.id_client : "nouveau") + ") " + this.nom + this.prenom + this.no_rue
 				+ this.voie + this.code_postal + this.ville + this.pays;
 	}
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Client other = (Client) obj;
+		if (id_client != other.id_client)
+			return false;
+		
+		return true;
+	}
 
 }
