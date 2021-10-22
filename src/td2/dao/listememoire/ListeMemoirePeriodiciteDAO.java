@@ -1,16 +1,17 @@
 package td2.dao.listememoire;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import td2.dao.DAOPeriodicite;
-import td2.PojoPerio;
+import td2.metier.Periodicite;
 
 public class ListeMemoirePeriodiciteDAO implements DAOPeriodicite {
 
 	private static ListeMemoirePeriodiciteDAO instance;
 
-	private List<PojoPerio> donnees;
+	private List<Periodicite> donnees;
 
 
 	public static ListeMemoirePeriodiciteDAO getInstance() {
@@ -24,15 +25,15 @@ public class ListeMemoirePeriodiciteDAO implements DAOPeriodicite {
 
 	private ListeMemoirePeriodiciteDAO() {
 
-		this.donnees = new ArrayList<PojoPerio>();
+		this.donnees = new ArrayList<Periodicite>();
 
-		this.donnees.add(new PojoPerio(1, "Mensuel"));
-		this.donnees.add(new PojoPerio(2, "Quotidien"));
+		this.donnees.add(new Periodicite(1, "Mensuel"));
+		this.donnees.add(new Periodicite(2, "Quotidien"));
 	}
 
 
 	@Override
-	public boolean create(PojoPerio objet) {
+	public boolean create(Periodicite objet) {
 
 		objet.setId_periodicite(3);
 		// Ne fonctionne que si l'objet métier est bien fait...
@@ -46,7 +47,7 @@ public class ListeMemoirePeriodiciteDAO implements DAOPeriodicite {
 	}
 
 	@Override
-	public boolean update(PojoPerio objet) {
+	public boolean update(Periodicite objet) {
 		
 		// Ne fonctionne que si l'objet métier est bien fait...
 		int idx = this.donnees.indexOf(objet);
@@ -61,9 +62,9 @@ public class ListeMemoirePeriodiciteDAO implements DAOPeriodicite {
 	}
 
 	@Override
-	public boolean delete(PojoPerio objet) {
+	public boolean delete(Periodicite objet) {
 
-		PojoPerio supprime;
+		Periodicite supprime;
 		
 		// Ne fonctionne que si l'objet métier est bien fait...
 		int idx = this.donnees.indexOf(objet);
@@ -77,9 +78,9 @@ public class ListeMemoirePeriodiciteDAO implements DAOPeriodicite {
 	}
 
 	@Override
-	public PojoPerio getById(int id) {
+	public Periodicite getById(int id) {
 		// Ne fonctionne que si l'objet métier est bien fait...
-		int idx = this.donnees.indexOf(new PojoPerio(id, "test"));
+		int idx = this.donnees.indexOf(new Periodicite(id, "test"));
 		if (idx == -1) {
 			throw new IllegalArgumentException("Aucun objet ne possède cet identifiant");
 		} else {
@@ -87,8 +88,8 @@ public class ListeMemoirePeriodiciteDAO implements DAOPeriodicite {
 		}
 	}
 	@Override
-	public ArrayList<PojoPerio> findAll() {
-		return (ArrayList<PojoPerio>) this.donnees;
+	public ArrayList<Periodicite> findAll() {
+		return (ArrayList<Periodicite>) this.donnees;
 	}
 }
 

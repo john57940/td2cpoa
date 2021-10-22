@@ -1,8 +1,8 @@
-package td2;
+package td2.metier;
 
 import java.util.Date;
 
-public class PojoAbonnement {
+public class Abonnement {
 
 	private int id_client;
 	private int id_revue;
@@ -10,11 +10,11 @@ public class PojoAbonnement {
 	private Date date_debut;
 	private Date date_fin;
 	
-	public PojoAbonnement(int id_client, int id_revue,Date date_debut, Date date_fin) {
+	public Abonnement(int id_client, int id_revue,Date date_debut, Date date_fin) {
 		this(-1, id_client, id_revue, date_debut, date_fin );
 	}
 
-	public PojoAbonnement(int id_abonnement,int id_client, int id_revue, Date date_debut, Date date_fin) {
+	public Abonnement(int id_abonnement,int id_client, int id_revue, Date date_debut, Date date_fin) {
 		this.setId_client(id_client);
 		this.setId_revue(id_revue);
 		this.setId_abonnement(id_abonnement);

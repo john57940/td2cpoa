@@ -2,8 +2,8 @@ package td2.dao;
 
 import java.util.ArrayList;
 
-import td2.PojoAbonnement;
+import td2.metier.Abonnement;
 
-public interface DAOAbonnement extends DAO<PojoAbonnement>{
-	ArrayList<PojoAbonnement> findAll();
+public interface DAOAbonnement extends DAO<Abonnement>{
+	ArrayList<Abonnement> findAll();
 }

@@ -1,6 +1,6 @@
-package td2;
+package td2.metier;
 
-public class PojoRevue {
+public class Revue {
 
 	private int id_revue;
 	private int id_periodicite;
@@ -9,12 +9,12 @@ public class PojoRevue {
 	private float tarif_numero;
 	private String visuel;
 	
-	public PojoRevue (int id_periodicite, String titre,String description, float tarif_numero, String visuel) {
+	public Revue (int id_periodicite, String titre,String description, float tarif_numero, String visuel) {
 		 this(-1, id_periodicite, titre, description, tarif_numero, visuel);
 		 }
 
 	
-	public PojoRevue(int id_revue, int id_periodicite, String titre, String description, float tarif_numero, String visuel) {
+	public Revue(int id_revue, int id_periodicite, String titre, String description, float tarif_numero, String visuel) {
 		this.setId_periodicite(id_periodicite);
 		this.setId_revue(id_revue);
 		this.setTitre(titre);

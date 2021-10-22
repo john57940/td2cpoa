@@ -1,11 +1,10 @@
 package td2.dao;
 
 import java.util.ArrayList;
+import td2.metier.Client;
 
-import td2.PojoClient;
-
-public interface DAOClient extends DAO<PojoClient>{
+public interface DAOClient extends DAO<Client>{
 	
-	ArrayList<PojoClient> findAll();
+	ArrayList<Client> findAll();
 	
 }

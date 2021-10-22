@@ -1,16 +1,16 @@
 package td2.dao.listememoire;
 
 import java.util.ArrayList;
-import java.util.List;
 
+import java.util.List;
 import td2.dao.DAOAbonnement;
-import td2.PojoAbonnement;
+import td2.metier.Abonnement;
 
 public class ListeMemoireAbonnementDAO implements DAOAbonnement {
 
 	private static ListeMemoireAbonnementDAO instance;
 
-	private List<PojoAbonnement> donnees;
+	private List<Abonnement> donnees;
 
 
 	public static ListeMemoireAbonnementDAO getInstance() {
@@ -24,7 +24,7 @@ public class ListeMemoireAbonnementDAO implements DAOAbonnement {
 
 	private ListeMemoireAbonnementDAO() {
 
-		this.donnees = new ArrayList<PojoAbonnement>();
+		this.donnees = new ArrayList<Abonnement>();
 
 		//this.donnees.add(new PojoAbonnement(1, 1, 1, ));
 		//this.donnees.add(new PojoAbonnement(2, 2, 2, )); a corriger
@@ -32,7 +32,7 @@ public class ListeMemoireAbonnementDAO implements DAOAbonnement {
 
 
 	@Override
-	public boolean create(PojoAbonnement objet) {
+	public boolean create(Abonnement objet) {
 
 		objet.setId_abonnement(3);
 		// Ne fonctionne que si l'objet métier est bien fait...
@@ -46,7 +46,7 @@ public class ListeMemoireAbonnementDAO implements DAOAbonnement {
 	}
 
 	@Override
-	public boolean update(PojoAbonnement objet) {
+	public boolean update(Abonnement objet) {
 		
 		// Ne fonctionne que si l'objet métier est bien fait...
 		int idx = this.donnees.indexOf(objet);
@@ -61,9 +61,9 @@ public class ListeMemoireAbonnementDAO implements DAOAbonnement {
 	}
 
 	@Override
-	public boolean delete(PojoAbonnement objet) {
+	public boolean delete(Abonnement objet) {
 
-		PojoAbonnement supprime;
+		Abonnement supprime;
 		
 		// Ne fonctionne que si l'objet métier est bien fait...
 		int idx = this.donnees.indexOf(objet);
@@ -77,7 +77,7 @@ public class ListeMemoireAbonnementDAO implements DAOAbonnement {
 	}
 
 	@Override
-	public PojoAbonnement getById(int id) {
+	public Abonnement getById(int id) {
 		// Ne fonctionne que si l'objet métier est bien fait...
 		//int idx = this.donnees.indexOf(new PojoAbonnement(id, )); a completer
 		//if (idx == -1) {
@@ -87,8 +87,8 @@ public class ListeMemoireAbonnementDAO implements DAOAbonnement {
 		}
 	//}
 	@Override
-	public ArrayList<PojoAbonnement> findAll() {
-		return (ArrayList<PojoAbonnement>) this.donnees;
+	public ArrayList<Abonnement> findAll() {
+		return (ArrayList<Abonnement>) this.donnees;
 	}
 }
 

@@ -1,16 +1,17 @@
 package td2.dao.listememoire;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import td2.dao.DAOClient;
-import td2.PojoClient;
+import td2.metier.Client;
 
 public class ListeMemoireClientDAO implements DAOClient {
 
 	private static ListeMemoireClientDAO instance;
 
-	private List<PojoClient> donnees;
+	private List<Client> donnees;
 
 
 	public static ListeMemoireClientDAO getInstance() {
@@ -24,16 +25,16 @@ public class ListeMemoireClientDAO implements DAOClient {
 
 	private ListeMemoireClientDAO() {
 
-		this.donnees = new ArrayList<PojoClient>();
+		this.donnees = new ArrayList<Client>();
 
-		this.donnees.add(new PojoClient(1, "vernet", "jonathan", "6", "rue des eglantines","57940","thionville","france" ));
-		this.donnees.add(new PojoClient(2, "mccafe", "john","92","walking street","92700","new york","etats unis"));
+		this.donnees.add(new Client(1, "vernet", "jonathan", "6", "rue des eglantines","57940","thionville","france" ));
+		this.donnees.add(new Client(2, "mccafe", "john","92","walking street","92700","new york","etats unis"));
 	}
 
 
 	@Override
-	public boolean create(PojoClient objet) {
-
+	public boolean create(Client objet) 
+	{
 		objet.setId_client(3);
 		// Ne fonctionne que si l'objet métier est bien fait...
 		while (this.donnees.contains(objet)) {
@@ -46,7 +47,7 @@ public class ListeMemoireClientDAO implements DAOClient {
 	}
 
 	@Override
-	public boolean update(PojoClient objet) {
+	public boolean update(Client objet) {
 		
 		// Ne fonctionne que si l'objet métier est bien fait...
 		int idx = this.donnees.indexOf(objet);
@@ -61,9 +62,9 @@ public class ListeMemoireClientDAO implements DAOClient {
 	}
 
 	@Override
-	public boolean delete(PojoClient objet) {
+	public boolean delete(Client objet) {
 
-		PojoClient supprime;
+		Client supprime;
 		
 		// Ne fonctionne que si l'objet métier est bien fait...
 		int idx = this.donnees.indexOf(objet);
@@ -77,9 +78,9 @@ public class ListeMemoireClientDAO implements DAOClient {
 	}
 
 	@Override
-	public PojoClient getById(int id) {
+	public Client getById(int id) {
 		// Ne fonctionne que si l'objet métier est bien fait...
-		int idx = this.donnees.indexOf(new PojoClient(id, "test", "test", "test", "test", "test", "test", "test"));
+		int idx = this.donnees.indexOf(new Client(id, "test", "test", "test", "test", "test", "test", "test"));
 		if (idx == -1) {
 			throw new IllegalArgumentException("Aucun objet ne possède cet identifiant");
 		} else {
@@ -87,8 +88,8 @@ public class ListeMemoireClientDAO implements DAOClient {
 		}
 	}
 	@Override
-	public ArrayList<PojoClient> findAll() {
-		return (ArrayList<PojoClient>) this.donnees;
+	public ArrayList<Client> findAll() {
+		return (ArrayList<Client>) this.donnees;
 	}
 }
 

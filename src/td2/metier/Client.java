@@ -1,6 +1,6 @@
-package td2;
+package td2.metier;
 
-public class PojoClient {
+public class Client {
 	private int id_client;
 	private String nom;
 	private String prenom;
@@ -10,11 +10,11 @@ public class PojoClient {
 	private String ville;
 	private String pays;
 
-	public PojoClient (String nom, String prenom, String no_rue, String voie, String code_postal,String ville, String pays) {
+	public Client (String nom, String prenom, String no_rue, String voie, String code_postal,String ville, String pays) {
 	 this(-1, nom, prenom, no_rue, voie, code_postal, ville, pays);
 	 }
 
-	public PojoClient(int id_client, String nom, String prenom, String no_rue, String voie, String code_postal,String ville, String pays) {
+	public Client(int id_client, String nom, String prenom, String no_rue, String voie, String code_postal,String ville, String pays) {
 		this.setId_client(id_client);
 		this.setNo_rue(nom);
 		this.setNom(prenom);

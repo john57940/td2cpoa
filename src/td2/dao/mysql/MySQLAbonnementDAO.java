@@ -2,8 +2,8 @@ package td2.dao.mysql;
 
 import java.util.ArrayList;
 
-import td2.PojoAbonnement;
 import td2.dao.DAOAbonnement;
+import td2.metier.Abonnement;
 
 public class MySQLAbonnementDAO implements DAOAbonnement {
     private static MySQLAbonnementDAO instance;
@@ -14,31 +14,31 @@ public class MySQLAbonnementDAO implements DAOAbonnement {
     	return instance;
     }
 	@Override
-	public PojoAbonnement getById(int id) {
+	public Abonnement getById(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean create(PojoAbonnement objet) {
+	public boolean create(Abonnement objet) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean update(PojoAbonnement objet) {
+	public boolean update(Abonnement objet) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean delete(PojoAbonnement objet) {
+	public boolean delete(Abonnement objet) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public ArrayList<PojoAbonnement> findAll() {
+	public ArrayList<Abonnement> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

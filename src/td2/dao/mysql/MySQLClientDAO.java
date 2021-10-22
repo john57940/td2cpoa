@@ -2,8 +2,8 @@ package td2.dao.mysql;
 
 import java.util.ArrayList;
 
-import td2.PojoClient;
 import td2.dao.DAOClient;
+import td2.metier.Client;
 
 public class MySQLClientDAO implements DAOClient {
 	private static MySQLClientDAO instance;
@@ -15,31 +15,31 @@ public class MySQLClientDAO implements DAOClient {
     }
 
 	@Override
-	public PojoClient getById(int id) {
+	public Client getById(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean create(PojoClient objet) {
+	public boolean create(Client objet) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean update(PojoClient objet) {
+	public boolean update(Client objet) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean delete(PojoClient objet) {
+	public boolean delete(Client objet) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public ArrayList<PojoClient> findAll() {
+	public ArrayList<Client> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

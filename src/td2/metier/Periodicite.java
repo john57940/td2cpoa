@@ -1,14 +1,14 @@
-package td2;
+package td2.metier;
 
-public class PojoPerio {
+public class Periodicite {
 	private int id_periodicite;
 	private String libelle;
 
-	public PojoPerio(String libelle) {
+	public Periodicite(String libelle) {
 		this(-1, libelle);
 	}
 
-	public PojoPerio(int id_periodicite, String libelle) {
+	public Periodicite(int id_periodicite, String libelle) {
 		this.setId_periodicite(id_periodicite);
 		this.setLibelle(libelle);
 	}
@@ -37,3 +37,4 @@ public class PojoPerio {
 	}
 
 }
+

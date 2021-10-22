@@ -2,8 +2,8 @@ package td2.dao.mysql;
 
 import java.util.ArrayList;
 
-import td2.PojoRevue;
 import td2.dao.DAORevue;
+import td2.metier.Revue;
 
 public class MySQLRevueDAO implements DAORevue {
 private static MySQLRevueDAO instance;
@@ -15,31 +15,31 @@ public static MySQLRevueDAO getInstance() {
 }
 
 	@Override
-	public PojoRevue getById(int id) {
+	public Revue getById(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean create(PojoRevue objet) {
+	public boolean create(Revue objet) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean update(PojoRevue objet) {
+	public boolean update(Revue objet) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean delete(PojoRevue objet) {
+	public boolean delete(Revue objet) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public ArrayList<PojoRevue> findAll() {
+	public ArrayList<Revue> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
