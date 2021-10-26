@@ -5,13 +5,13 @@ public class NormalisationVille {
 		char[] arr = ville.toCharArray();
 		arr[0] = Character.toUpperCase(arr[0]);
 		return new String(arr);
-//	}
+	}
 
-	//public static String normalize(String ville) {
-		//ville = ville.replaceAll("\\s+", "");
-//		if (ville) {
+	public static String normalize(String ville) {
+		ville = ville.replaceAll("\\s+", "");
+	if (ville) {
 
 		}
 	}
 
-//}
+}
