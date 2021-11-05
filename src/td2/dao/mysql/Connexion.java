@@ -6,7 +6,7 @@ public class Connexion {
 
 	public static Connection creeConnexion() {
 
-		String url = "jdbc:mysql://devbdd.iutmetz.univ-lorraine.fr:3306/vernet18u_java";
+		String url = "jdbc:mysql://devbdd.iutmetz.univ-lorraine.fr:3306/vernet18u_CPOA";
 		String login = "vernet18u_appli";
 		url += "?serverTimezone=Europe/Paris";
 		String pwd = "sv10041004";
