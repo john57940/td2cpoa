@@ -85,6 +85,7 @@ public class Revue {
 		return "(" + (this.id_revue >= 0 ? this.id_revue : "nouveau") + ") " + this.titre + this.description
 				+ this.tarif_numero + this.visuel + this.id_periodicite;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

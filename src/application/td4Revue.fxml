@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControleurCreerRevue">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControleurRevue">
    <children>
       <GridPane alignment="CENTER" prefHeight="344.0" prefWidth="600.0">
         <columnConstraints>
@@ -30,18 +29,18 @@
             <Label text="Description :" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <Label text="Tarif :" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
             <Label text="Périodicité :" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <TextField id="accordéon de droite Code" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="254.0" GridPane.columnIndex="1" />
-            <TextField id="accordéon de droite Code" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="72.0" prefWidth="277.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField id="accordéon de droite Code" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="92.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField id="accordéon de droite Code" fx:id="idtitre" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="254.0" GridPane.columnIndex="1" />
+            <TextField id="accordéon de droite Code" fx:id="iddescription" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="72.0" prefWidth="277.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField id="accordéon de droite Code" fx:id="idtarif" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="92.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="euros au numéro" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <ComboBox id="accordéon de droite Code" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox id="accordéon de droite Code" fx:id="idpériodicité" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
       </GridPane>
       <FlowPane alignment="CENTER" prefHeight="79.0" prefWidth="600.0">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#create" text="Créer" />
+            <Button fx:id="idcreer" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#create" text="Créer" />
          </children>
       </FlowPane>
-      <FlowPane alignment="CENTER" prefHeight="71.0" prefWidth="600.0" />
+      <FlowPane fx:id="idaffichage" alignment="CENTER" prefHeight="71.0" prefWidth="600.0" />
    </children>
 </VBox>

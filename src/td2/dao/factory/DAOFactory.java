@@ -32,4 +32,12 @@ public abstract class DAOFactory {
 	public abstract DAOPeriodicite getDAOPeriodicite();
 
 	public abstract DAORevue getDAORevue();
+
+	public Object getPeriodiciteDAO() {
+		return null;
+	}
+
+	public Object getRevueDAO() {
+		return null;
+	}
 }
