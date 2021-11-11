@@ -9,31 +9,30 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class VueRevue extends Stage{
+public class VueRevue extends Stage {
 	private ControleurRevue controleur;
 
-	
-	public VueRevue() { 
+	public VueRevue() {
 		try {
 			this.initModality(Modality.APPLICATION_MODAL);
-			final URL fxmlURL= getClass().getResource("/application/vue/CreerRevue.fxml");
-			final FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL); 
-			final VBox node = (VBox)fxmlLoader.load();
+			final URL fxmlURL = getClass().getResource("/application/vue/CreerRevue.fxml");
+			final FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
+			final VBox node = (VBox) fxmlLoader.load();
 			Scene scene = new Scene(node);
 			controleur = fxmlLoader.getController();
 			setScene(scene);
 			setTitle("Revue");
 			controleur.setVue(this);
 			this.show();
-		}catch(Exception e ) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	
 	public ControleurRevue getControleur() {
 		return this.controleur;
 	}
+
 	public void setControleur(ControleurRevue controleur) {
 		this.controleur = controleur;
 	}
