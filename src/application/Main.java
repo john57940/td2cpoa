@@ -2,6 +2,7 @@ package application;
 
 import java.net.URL;
 
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,7 +14,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			URL fxmlURL = getClass().getResource("td4/Vue/td4.fxml");
+			URL fxmlURL = getClass().getResource("application/vue/td4main.fxml");
 			FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
 			Node root = fxmlLoader.load();
 			Scene scene = new Scene((VBox) root, 600, 400);

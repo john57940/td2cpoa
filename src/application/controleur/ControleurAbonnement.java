@@ -1,4 +1,4 @@
-package application;
+package application.controleur;
 
 public class ControleurAbonnement {
 
