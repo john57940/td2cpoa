@@ -33,7 +33,7 @@ public class ControleurPeriodicite implements ChangeListener<Periodicite>, Initi
 	private TableColumn<Periodicite, String> libelle;
 	private DAOFactory dao;
 
-	public void ajouterPeriodicite() {
+	public void addPeriodicite() {
 		String libelle = this.txtLibelle.getText();
 
 		Pattern pattern = Pattern.compile("^[A-Za-z-]+$");

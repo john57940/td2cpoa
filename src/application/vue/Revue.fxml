@@ -50,7 +50,7 @@
       </GridPane>
       <FlowPane fx:id="bouton" alignment="CENTER" prefHeight="150.0" prefWidth="698.0">
          <children>
-            <Button fx:id="btnCreer" mnemonicParsing="false" onAction="#ajouterRevue" prefHeight="26.0" prefWidth="89.0" text="Creer" />
+            <Button fx:id="btnCreer" mnemonicParsing="false" onAction="#addRevue" prefHeight="26.0" prefWidth="89.0" text="Creer" />
          </children>
       </FlowPane>
       <FlowPane fx:id="affichage" alignment="CENTER" prefHeight="236.0" prefWidth="698.0">

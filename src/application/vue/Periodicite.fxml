@@ -35,7 +35,7 @@
       </GridPane>
       <FlowPane alignment="CENTER" prefHeight="70.0" prefWidth="735.0">
          <children>
-            <Button fx:id="btnCreer" mnemonicParsing="false" onAction="#ajouterPeriodicite" prefHeight="26.0" prefWidth="86.0" text="Creer" />
+            <Button fx:id="btnCreer" mnemonicParsing="false" onAction="#addPeriodicite" prefHeight="26.0" prefWidth="86.0" text="Creer" />
          </children>
       </FlowPane>
       <FlowPane alignment="CENTER" prefHeight="159.0" prefWidth="735.0">

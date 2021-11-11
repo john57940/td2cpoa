@@ -78,7 +78,7 @@ public class ControleurRevue implements Initializable, ChangeListener<Revue> {
 		}
 	}
 
-	public void ajouterVisuel() {
+	public void addVisuel() {
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter(".jpg", "JPG"),
 				new FileChooser.ExtensionFilter(".png", "PNG"));

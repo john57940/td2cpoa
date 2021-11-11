@@ -50,7 +50,7 @@ public class ControleurAbonnement implements Initializable, ChangeListener<Abonn
 	private static ControleurAccueil controleurAccueil;
 	private DAOFactory dao;
 
-	public void ajouterAbonnement() {
+	public void addAbonnement() {
 		LocalDate datedeb = this.iddateDeb.getValue();
 		LocalDate datefin = this.iddateFin.getValue();
 		Client client = this.cbxClient.getValue();
