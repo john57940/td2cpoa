@@ -14,7 +14,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			URL fxmlURL = getClass().getResource("application/vue/td4main.fxml");
+			URL fxmlURL = getClass().getResource("application/vue/Main.fxml");
 			FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
 			Node root = fxmlLoader.load();
 			Scene scene = new Scene((VBox) root, 600, 400);

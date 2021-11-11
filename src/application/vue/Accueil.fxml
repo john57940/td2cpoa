@@ -3,13 +3,14 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurMenu">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controleur.ControleurAccueil">
    <children>
       <GridPane prefHeight="410.0" prefWidth="600.0">
         <columnConstraints>
@@ -26,22 +27,26 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnClient" mnemonicParsing="false" onAction="#lanceClient" prefHeight="57.0" prefWidth="150.0" text="Client" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="btnAbonnement" mnemonicParsing="false" onAction="#lanceAbonnement" prefHeight="57.0" prefWidth="150.0" text="Abonnement" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="btnPeriodicite" mnemonicParsing="false" onAction="#lancePeriodicite" prefHeight="57.0" prefWidth="150.0" text="Periodicite" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Button fx:id="btnRevue" mnemonicParsing="false" onAction="#lanceRevue" prefHeight="57.0" prefWidth="150.0" text="Revue" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Choisir une persistance" GridPane.rowIndex="1">
+            <Button fx:id="btnClient" mnemonicParsing="false" onAction="#DemarreClient" prefHeight="57.0" prefWidth="150.0" text="Client" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btnAbonnement" mnemonicParsing="false" onAction="#DemarreAbonnement" prefHeight="57.0" prefWidth="150.0" text="Abonnement" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="btnPeriodicite" mnemonicParsing="false" onAction="#DemarrePeriodicite" prefHeight="57.0" prefWidth="150.0" text="Periodicite" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="btnRevue" mnemonicParsing="false" onAction="#DemarreRevue" prefHeight="57.0" prefWidth="150.0" text="Revue" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Choisir une persistance : " GridPane.rowIndex="2">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label text="RevuesOnLine" GridPane.columnIndex="1">
+            <Label text="RevueOnLine " GridPane.columnIndex="1">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <RadioButton fx:id="rdbMysql" mnemonicParsing="false" text="MySQL" GridPane.rowIndex="2" />
-            <RadioButton fx:id="rdbListeMemoire" mnemonicParsing="false" text="Liste Memoire" GridPane.rowIndex="3" />
+            <RadioButton fx:id="rdbMysql" mnemonicParsing="false" text="MySQL" GridPane.rowIndex="3">
+            	<toggleGroup>
+            		<ToggleGroup fx:id="choixpers" />
+           		</toggleGroup>
+           	</RadioButton>
+            <RadioButton fx:id="rdbListeMemoire" mnemonicParsing="false" text="Liste Memoire" toggleGroup="$choixpers" GridPane.rowIndex="4" />
          </children>
       </GridPane>
    </children>

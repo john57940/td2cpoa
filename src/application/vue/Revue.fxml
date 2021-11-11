@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurRevue">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controleur.ControleurRevue">
 
    <children>
       <GridPane fx:id="saisie" prefHeight="310.0" prefWidth="626.0" style="-fx-border-style: solid; -fx-border-width: 4;">
@@ -33,13 +33,13 @@
             <Label prefHeight="17.0" prefWidth="37.0" text="Titre :" />
             <Label prefHeight="17.0" prefWidth="74.0" text="Description :" GridPane.rowIndex="1" />
             <Label prefHeight="17.0" prefWidth="43.0" text=" Tarif : " GridPane.rowIndex="2" />
-            <Label text="euros au numéro" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Label text="Periodicité : " GridPane.rowIndex="3" />
+            <Label text="euros au numero" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Periodicite : " GridPane.rowIndex="3" />
             <ComboBox fx:id="cboxPeriodicite" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="txtTitre" GridPane.columnIndex="1" />
             <TextField fx:id="txtTarif" maxWidth="-Infinity" prefHeight="26.0" prefWidth="54.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextArea fx:id="txtDescription" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="btn_visuel" mnemonicParsing="false" onAction="#ajouterVisuel" text="Visuel" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="btn_visuel" mnemonicParsing="false" onAction="#addVisuel" text="Visuel" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
          </children>
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -50,7 +50,7 @@
       </GridPane>
       <FlowPane fx:id="bouton" alignment="CENTER" prefHeight="150.0" prefWidth="698.0">
          <children>
-            <Button fx:id="btnCreer" mnemonicParsing="false" onAction="#ajouterRevue" prefHeight="26.0" prefWidth="89.0" text="Créer" />
+            <Button fx:id="btnCreer" mnemonicParsing="false" onAction="#ajouterRevue" prefHeight="26.0" prefWidth="89.0" text="Creer" />
          </children>
       </FlowPane>
       <FlowPane fx:id="affichage" alignment="CENTER" prefHeight="236.0" prefWidth="698.0">
@@ -60,7 +60,7 @@
                 <TableColumn fx:id="titre" prefWidth="90.0" text="Titre" />
                 <TableColumn fx:id="description" prefWidth="119.0" text="Description " />
                   <TableColumn fx:id="tarif" prefWidth="53.0" text="Tarif" />
-                  <TableColumn fx:id="periodicite" prefWidth="88.0" text="Périodicité" />
+                  <TableColumn fx:id="periodicite" prefWidth="88.0" text="Periodicite" />
               </columns>
                <FlowPane.margin>
                   <Insets bottom="5.0" />
@@ -73,8 +73,8 @@
       </FlowPane>
       <FlowPane alignment="CENTER" prefHeight="147.0" prefWidth="698.0">
          <children>
-            <Button fx:id="btnSupprimer" mnemonicParsing="false" onAction="#supprimerRevue" prefHeight="25.0" prefWidth="90.0" text="Supprimer" />
             <Button fx:id="btnModifier" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Modifier" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteRevue" prefHeight="25.0" prefWidth="90.0" text="Supprimer" />
          </children>
       </FlowPane>
    </children>
